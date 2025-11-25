@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-3pg)0gsk0&jn!0*qacz1_!=ux4oc^6d40@9^o1%cuxrnmm@+9^
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -80,9 +80,9 @@ DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.mysql",
         "NAME": "dbaas_management",
-        "USER": "root",
+        "USER": "admin",
         "PASSWORD": "12345678",
-        "HOST": "localhost",
+        "HOST": "dbaas-service.c1uxdfdkaage.us-east-1.rds.amazonaws.com",
         "PORT": "3306",
     }
 }
@@ -141,8 +141,8 @@ CSRF_TRUSTED_ORIGINS = ["http://127.0.0.1:5500", "http://localhost:5500"]
 
 
 DBAAS_ADMIN_CONFIG = {
-    "HOST": "localhost",
-    "USER": "root",
+    "HOST": "dbaas-service.c1uxdfdkaage.us-east-1.rds.amazonaws.com",
+    "USER": "admin",
     "PASSWORD": "12345678",
     "PORT": 3306,
 }
